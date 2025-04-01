@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rating animation</title>
+    <script src="https://unpkg.com/@rive-app/rive-canvas@1.0.98/dist/rive.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        canvas {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="riveCanvas"></canvas>
+    <script>
+        const canvas = document.getElementById('riveCanvas');
+        const r = new rive.Rive({
+            canvas: canvas,
+            src: 'rating_animation.riv', // Replace with your .riv file name
+            autoplay: true,
+            layout: new rive.Layout({
+                fit: rive.Fit.Cover,
+            }),
+        });
+    </script>
+</body>
+</html>
